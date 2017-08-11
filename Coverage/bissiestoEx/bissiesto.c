@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main(int argc, char const *argv[]) {
+  printf ("Characters: %s  \n", argv[1]);
+  int num = int(argv[1]);
+  if(num == 5){
+
+  }
+  return 0;
+}
