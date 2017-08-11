@@ -4,15 +4,15 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>CoverageTest.xcscheme</key>
+		<key>CircularPrimo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>BA09F1C71F3DEC0A0016DBF2</key>
+		<key>BA09F1EF1F3DF45A0016DBF2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

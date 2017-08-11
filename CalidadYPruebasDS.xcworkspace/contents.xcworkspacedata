@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:CoverageTest/CoverageTest.xcodeproj">
+      location = "group:CircularPrimo/CircularPrimo.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Reviewc++/Reviewc++.xcodeproj">
