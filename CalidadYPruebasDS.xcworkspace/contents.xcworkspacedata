@@ -5,6 +5,18 @@
       location = "container:"
       name = "UnitTest">
       <FileRef
+         location = "group:UnitTest/SortTest/SortTest.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:UnitTest/TypedValueParamEx/TypedValueParamEx.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:UnitTest/TypedTest/TypedTest.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:UnitTest/ValueParamsTest/ValueParamsTest.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:UnitTest/PrimoTest/PrimoTest.xcodeproj">
       </FileRef>
       <FileRef
