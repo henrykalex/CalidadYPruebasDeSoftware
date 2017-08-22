@@ -1,0 +1,14 @@
+Mensaje al inicio
+
+TestCase name: TcnUno
+Test name: tname
+Falla. Los detalles son los siguientes:
+Linea del error: f
+      Expected: 1
+To be equal to: 0
+El tiempo de tname Test: ›
+El tiempo de TcnUno TestCase: ›
+UnitTest time: 2203
+EL # de Test ejecutados fue: 1
+Correctos: 0
+Incorrectos: 1
