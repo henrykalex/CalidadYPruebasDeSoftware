@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA11DCEC1F50776000E92D67 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA42876D1F5076F500D1AED3 /* libgtest.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		BA42875B1F504E1100D1AED3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA42875A1F504E1100D1AED3 /* main.cpp */; };
-		BA4287631F506B8700D1AED3 /* ScannerTest.cc in Sources */ = {isa = PBXBuildFile; fileRef = BA4287621F506B8700D1AED3 /* ScannerTest.cc */; };
-		BA4287671F50700A00D1AED3 /* gtest_main.o in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4287661F50700A00D1AED3 /* gtest_main.o */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,12 +24,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BA11DCE81F50773D00E92D67 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = ../../UnitTest/googletest/googletest/xcode/build/Release/libgtest_main.a; sourceTree = "<group>"; };
+		BA11DCEA1F50775100E92D67 /* gtest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gtest.framework; path = ../../UnitTest/googletest/googletest/xcode/build/Release/gtest.framework; sourceTree = "<group>"; };
 		BA4287571F504E1100D1AED3 /* Evaluacion1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Evaluacion1; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA42875A1F504E1100D1AED3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BA4287611F504EA700D1AED3 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
-		BA4287621F506B8700D1AED3 /* ScannerTest.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScannerTest.cc; sourceTree = "<group>"; };
-		BA4287641F506C1D00D1AED3 /* ScannerTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScannerTest.h; sourceTree = "<group>"; };
 		BA4287661F50700A00D1AED3 /* gtest_main.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = gtest_main.o; path = ../../UnitTest/googletest/googletest/make/gtest_main.o; sourceTree = "<group>"; };
+		BA4287681F5075D800D1AED3 /* gtest-all.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = "gtest-all.o"; path = "../../UnitTest/gtest-all.o"; sourceTree = "<group>"; };
+		BA42876B1F50764000D1AED3 /* sample1.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; name = sample1.o; path = ../../UnitTest/googletest/googletest/make/sample1.o; sourceTree = "<group>"; };
+		BA42876D1F5076F500D1AED3 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../UnitTest/googletest/googletest/xcode/build/Release/libgtest.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA4287671F50700A00D1AED3 /* gtest_main.o in Frameworks */,
+				BA11DCEC1F50776000E92D67 /* libgtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +69,6 @@
 			children = (
 				BA42875A1F504E1100D1AED3 /* main.cpp */,
 				BA4287611F504EA700D1AED3 /* Scanner.h */,
-				BA4287621F506B8700D1AED3 /* ScannerTest.cc */,
-				BA4287641F506C1D00D1AED3 /* ScannerTest.h */,
 			);
 			path = Evaluacion1;
 			sourceTree = "<group>";
@@ -76,6 +76,11 @@
 		BA4287651F50700A00D1AED3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BA11DCEA1F50775100E92D67 /* gtest.framework */,
+				BA11DCE81F50773D00E92D67 /* libgtest_main.a */,
+				BA42876D1F5076F500D1AED3 /* libgtest.a */,
+				BA42876B1F50764000D1AED3 /* sample1.o */,
+				BA4287681F5075D800D1AED3 /* gtest-all.o */,
 				BA4287661F50700A00D1AED3 /* gtest_main.o */,
 			);
 			name = Frameworks;
@@ -138,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA4287631F506B8700D1AED3 /* ScannerTest.cc in Sources */,
 				BA42875B1F504E1100D1AED3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,8 +242,10 @@
 		BA42875F1F504E1100D1AED3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest/googletest/googletest/xcode/build/Release;
 				HEADER_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest/googletest/googletest/include;
-				LIBRARY_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest;
+				LIBRARY_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest/googletest/googletest/xcode/build/Release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,8 +253,10 @@
 		BA4287601F504E1100D1AED3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				FRAMEWORK_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest/googletest/googletest/xcode/build/Release;
 				HEADER_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest/googletest/googletest/include;
-				LIBRARY_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest;
+				LIBRARY_SEARCH_PATHS = /Users/Henry/Desktop/5toITC/CalidadYPruebasDeSoftware/CalidadYPruebasDeSoftwareGit/UnitTest/googletest/googletest/xcode/build/Release;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -272,6 +280,7 @@
 				BA4287601F504E1100D1AED3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,7 +15,7 @@
 using namespace std;
 
 void testPorts(int value){
-    
+    cout << value << endl;
 }
 
 

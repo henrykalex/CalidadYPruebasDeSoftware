@@ -32,7 +32,7 @@ struct NetFile {
 #define BUFFER_SIZE 1000
 class PortScanner {
 private:
-    static unsigned int _referenceCount;
+
     std::string getLsofOutput() {
         std::string retVal;
         FILE * file = popen("lsof -i -n -P -F", "r");
@@ -107,6 +107,7 @@ private:
         return retVal;
     }
 public:
+    static unsigned int _referenceCount;
     void * operator new(std::size_t size) {
         ++_referenceCount;
         return malloc(size);
@@ -132,14 +133,5 @@ public:
 };
 unsigned int PortScanner::_referenceCount = 0;
 
-int main(int argc, const char * argv[]) {
-    PortScanner * ps = new PortScanner;
-    std::vector<NetFile> listeningPorts = ps->getListeningPorts();
-    for (std::vector<NetFile>::iterator it = listeningPorts.begin(); it != listeningPorts.end(); it++) {
-        NetFile nf = (*it);
-        std::cout << "Port: " << nf.port << ", Interface: " << nf.host << ", Protocol: " << nf.protocol << ", Command: " << nf.command << ", Status: " << nf.status << std::endl;
-    }
-    return 0;
-}
 
 #endif /* Scanner_h */
