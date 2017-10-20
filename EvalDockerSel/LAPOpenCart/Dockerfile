@@ -18,6 +18,3 @@ RUN chmod 0755 image/cache/
 RUN chmod 0755 image/catalog/
 RUN chmod 0755 config.php
 RUN chmod 0755 admin/config.php
-
-RUN apt update
-RUN sudo apt-get -y install mysql-server
