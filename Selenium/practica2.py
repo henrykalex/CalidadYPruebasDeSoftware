@@ -98,7 +98,7 @@ def register_users(usersT):
                             WebDriverWait(driver,10).until(EC.text_to_be_present_in_element((By.TAG_NAME,'h1'),'Welcome to the Simple Travel Agency!'))
                         finally:
                             if index == 6:
-                                break     
+                                break
 
 
 
